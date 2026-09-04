@@ -1,0 +1,7 @@
+pending     = just created, user is on checkout (in progress)
+awaiting_payment = user clicked "Continue to payment", sent to PayFast
+paid        = PayFast confirmed
+processing  = being packed
+shipped     = out for delivery
+delivered   = done
+cancelled   = abandoned

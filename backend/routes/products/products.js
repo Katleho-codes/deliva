@@ -1,0 +1,16 @@
+import express from "express";
+import createProduct from "../../controller/products/create-product.js";
+import { limiter } from "../../utils/limiter.js";
+import getProducts from "../../controller/products/get-products.js";
+import { optionalAuth } from "../../middleware/optionalAuth.js";
+import { isLoggedIn } from "../../middleware/isLoggedIn.js";
+import getProduct from "../../controller/products/get-product.js";
+import updateProduct from "../../controller/products/update-product.js";
+import deleteProduct from "../../controller/products/delete-product.js";
+const router = express.Router();
+router.post("/", limiter, isLoggedIn, createProduct);
+router.get("/", optionalAuth, getProducts);
+router.put("/:id", limiter, isLoggedIn, updateProduct);
+router.delete("/:id", limiter, isLoggedIn, deleteProduct);
+router.get("/:slug", optionalAuth, getProduct);
+export { router };

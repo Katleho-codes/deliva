@@ -1,0 +1,2 @@
+products -> add to cart -> checkout cart -> places order in the background -> shipping details + continue to payment -> payfast success screen (pending) -> orders screen -> track order(s)
+
